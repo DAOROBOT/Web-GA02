@@ -5,187 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giới thiệu Trần Quang Đạo</title>
     
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-            margin: 0; 
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background-color: #fff;
-            padding: 1rem 0;
-            border-bottom: 1px solid #eee;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #2a6dfc; 
-            text-decoration: none;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin-left: 25px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #555;
-            font-weight: 400;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active { 
-            color: #2a6dfc; 
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-
-
-        .profile-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 50px 20px; 
-            box-sizing: border-box;
-        }
-
-        .profile-card {
-            background: #ffffff; 
-            border-radius: 12px; 
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07); 
-            max-width: 400px; 
-            width: 100%;
-            padding: 30px;
-            text-align: center; 
-            box-sizing: border-box;
-        }
-
-        .avatar {
-            width: 130px; 
-            height: 130px;
-            border-radius: 50%; 
-            border: 4px solid #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
-
-        .profile-card h1 {
-            color: black; 
-            font-size: 1.8em;
-            margin: 10px 0 5px 0;
-        }
-
-        .profile-card h2 {
-            color: gray; 
-            font-size: 1.1em;
-            font-weight: normal;
-            margin: 0 0 25px 0;
-        }
-        
-        .hobbies-title {
-            font-size: 1.2em;
-            font-weight: 600; 
-            color: navy;
-            margin-bottom: 15px;
-            border-top: 1px solid #f0f0f0;
-            padding-top: 20px;
-        }
-
-        .profile-card ul {
-            list-style-type: none; 
-            padding: 0;
-            margin: 0;
-        }
-
-        .profile-card li {
-            background-color: #f0f2f5; 
-            border-radius: 8px;
-            padding: 12px;
-            margin-bottom: 10px;
-            font-size: 1em;
-            color: #333;
-            transition: all 0.2s ease-in-out; 
-        }
-
-        .profile-card li:last-child {
-            margin-bottom: 0; 
-        }
-
-        .profile-card li:hover {
-            background-color: #e9ebee; 
-            transform: scale(1.03); 
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <a href="home.html" class="logo">Nhóm Web Development - 23KTPM1 - GA01 - 2025</a>
+<body class="bg-gray-100 font-sans text-gray-800">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="home.html" class="text-xl font-bold text-blue-600 no-underline">
+                Nhóm Web Development - 23KTPM1 - GA01 - 2025
+            </a>
             <nav>
-                <ul>
-                    <li><a href="home.html">Trang chủ</a></li>
-                    <li><a href="Thoại.html">Thoại</a></li>
-                    <li><a href="Đạo.html" class="active">Đạo</a></li> 
-                    <li><a href="Phúc.html">Phúc</a></li>
-                    <li><a href="huy.html">Huy</a></li>
-                    <li><a href="Hải.html">Hải</a></li>
+                <ul class="flex space-x-6">
+                    <li><a href="home.html" class="text-gray-600 hover:text-blue-600 transition-colors">Trang chủ</a></li>
+                    <li><a href="Thoại.html" class="text-gray-600 hover:text-blue-600 transition-colors">Thoại</a></li>
+                    <li><a href="Đạo.html" class="text-blue-600 font-semibold">Đạo</a></li> 
+                    <li><a href="Phúc.html" class="text-gray-600 hover:text-blue-600 transition-colors">Phúc</a></li>
+                    <li><a href="huy.html" class="text-gray-600 hover:text-blue-600 transition-colors">Huy</a></li>
+                    <li><a href="Hải.html" class="text-gray-600 hover:text-blue-600 transition-colors">Hải</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="profile-container">
-        <div class="profile-card">
-            <img src="assets/assets_Alvin/Alvin.jpg" alt="Ảnh đại diện của Trần Quang Đạo" class="avatar">
-            <h1>Trần Quang Đạo</h1>
-            <h2>Mã số sinh viên: 21127498</h2>
-            <p class="hobbies-title">Sở thích:</p>
-            <ul>
-                <li>Đọc sách</li>
-                <li>Coding</li>
-                <li>Nghe nhạc</li>
+    <main class="min-h-screen flex items-center justify-center p-4">
+        <div class="profile-card bg-white rounded-xl shadow-lg max-w-md w-full p-8 text-center">
+            <img src="assets/assets_Alvin/Alvin.jpg" alt="Ảnh đại diện của Trần Quang Đạo" class="w-32 h-32 rounded-full border-4 border-white shadow-md object-cover mx-auto mb-4">
+            
+            <h1 class="text-3xl font-bold text-gray-900 mt-2">Trần Quang Đạo</h1>
+            <h2 class="text-lg text-gray-500 mb-6">Mã số sinh viên: 21127498</h2>
+            
+            <p class="text-xl font-semibold text-indigo-800 mb-4 border-t border-gray-200 pt-6">Sở thích:</p>
+            
+            <ul class="space-y-3">
+                <li class="bg-gray-100 rounded-lg py-3 px-4 text-gray-700 transition-all duration-200 hover:bg-gray-200 hover:scale-105">
+                    Đọc sách
+                </li>
+                <li class="bg-gray-100 rounded-lg py-3 px-4 text-gray-700 transition-all duration-200 hover:bg-gray-200 hover:scale-105">
+                    Coding
+                </li>
+                <li class="bg-gray-100 rounded-lg py-3 px-4 text-gray-700 transition-all duration-200 hover:bg-gray-200 hover:scale-105">
+                    Nghe nhạc
+                </li>
             </ul>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; Nhóm Web Development - 23KTPM1 - GA01 - 2025</p>
+    <footer class="bg-gray-800 text-white text-center py-5">
+        <div class="container mx-auto px-4">
+            <p>&copy; Nhóm Web Development - 23KTPM1 - GA02 - 2025</p>
         </div>
     </footer>
 </body>
