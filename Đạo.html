@@ -8,23 +8,40 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 font-sans text-gray-800">
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold text-blue-600 no-underline">
-                Nhóm Web Development - 23KTPM1 - GA02 - 2025
-            </a>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors">Trang chủ</a></li>
-                    <li><a href="Thoại.html" class="text-gray-600 hover:text-blue-600 transition-colors">Thoại</a></li>
-                    <li><a href="Đạo.html" class="text-blue-600 font-semibold">Đạo</a></li> 
-                    <li><a href="Phúc.html" class="text-gray-600 hover:text-blue-600 transition-colors">Phúc</a></li>
-                    <li><a href="huy.html" class="text-gray-600 hover:text-blue-600 transition-colors">Huy</a></li>
-                    <li><a href="Hải.html" class="text-gray-600 hover:text-blue-600 transition-colors">Hải</a></li>
+    <header class="sticky top-0 z-10 bg-white py-4 shadow-sm">
+        <div class="max-w-[1100px] mx-auto px-5 flex justify-between items-center">
+            <a href="index.html" class="text-lg sm:text-xl lg:text-2xl font-bold text-blue-600 no-underline flex-shrink-0">Nhóm Web Development - 23KTPM1 - GA01 - 2025</a>
+            
+            <button id="menuToggle" class="md:hidden cursor-pointer" aria-label="Toggle Menu">
+                <img src="assets/burger-bar.png" alt="Menu" class="w-8 h-8"/>
+            </button>
+
+            <nav id="mobileMenu" class="hidden md:flex absolute md:relative top-16 md:top-0 left-0 right-0 md:left-auto md:right-auto bg-white md:bg-transparent w-full md:w-auto flex-col md:flex-row shadow-md md:shadow-none">
+                <ul class="list-none flex flex-col md:flex-row gap-0 md:gap-6 p-4 md:p-0">
+                    <li><a href="index.html" class="no-underline text-gray-600 font-normal transition-colors hover:text-blue-600 block py-2 md:py-0">Trang chủ</a></li>
+                    <li><a href="Thoại.html" class="no-underline text-gray-600 font-normal transition-colors hover:text-blue-600 block py-2 md:py-0">Thoại</a></li>
+                    <li><a href="Đạo.html" class="no-underline text-blue-600 font-normal transition-colors block py-2 md:py-0">Đạo</a></li>
+                    <li><a href="Phúc.html" class="no-underline text-gray-600 font-normal transition-colors hover:text-blue-600 block py-2 md:py-0">Phúc</a></li>
+                    <li><a href="huy.html" class="no-underline text-gray-600 font-normal transition-colors hover:text-blue-600 block py-2 md:py-0">Huy</a></li>
+                    <li><a href="Hải.html" class="no-underline text-gray-600 font-normal transition-colors hover:text-blue-600 block py-2 md:py-0">Hải</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        }); // Toggle menu khi click
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden'); // Đóng menu khi click vào link
+            });
+        });
+    </script>
 
     <main class="min-h-screen flex items-center justify-center p-4">
         <div class="profile-card bg-white rounded-xl shadow-lg max-w-md w-full p-8 text-center">

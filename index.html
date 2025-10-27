@@ -4,213 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Chủ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-['Segoe UI',Arial,sans-serif] leading-relaxed text-gray-700 bg-gray-50">
 
-    <style>
+    <header class="sticky top-0 z-10 bg-white py-4 shadow-sm">
+        <div class="max-w-[1100px] mx-auto px-5 flex justify-between items-center">
+            <a href="index.html" class="text-lg sm:text-xl lg:text-2xl font-bold text-blue-600 no-underline flex-shrink-0">Nhóm Web Development - 23KTPM1 - GA02 - 2025</a>
+            
+            <button id="menuToggle" class="md:hidden cursor-pointer" aria-label="Toggle Menu">
+                <img src="assets/burger-bar.png" alt="Menu" class="w-8 h-8"/>
+            </button>
 
-        body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background-color: #fff;
-            padding: 1rem 0;
-            border-bottom: 1px solid #eee;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #2a6dfc; 
-            text-decoration: none;
-        }
-
-        nav ul {
-            list-style-type: none;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin-left: 25px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #555;
-            font-weight: 400;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-            color: #2a6dfc; 
-        }
-
-        .welcome {
-            background: linear-gradient(to right, #2a6dfc, #5c93ff);
-            color: #fff;
-            text-align: center;
-            padding: 80px 0;
-        }
-
-        .welcome h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .welcome p {
-            font-size: 1.2rem;
-            font-weight: 400;
-            margin-bottom: 30px;
-        }
-
-        .all-members {
-            padding: 60px 0;
-            background-color: #fff;
-            text-align: center;
-        }
-
-        .all-members h2 {
-            font-size: 2.2rem;
-            margin-bottom: 40px;
-            color: #333;
-        }
-
-        .all-members-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .member {
-            padding: 30px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .member:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .member img {
-            border-radius: 50%;
-            margin-bottom: 15px;
-            width: 100px;
-            height: 100px;
-        }
-
-        .member h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: #2a6dfc;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-
-        @media (max-width: 768px) {
-            header .container {
-                flex-direction: column;
-            }
-
-            nav {
-                margin-top: 15px;
-            }
-
-            .welcome h1 {
-                font-size: 2.2rem;
-            }
-
-            .all-members-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-    </head>
-<body>
-
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">Nhóm Web Development - 23KTPM1 - GA02 - 2025</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Trang chủ</a></li>
-                    <li><a href="Thoại.html">Thoại</a></li>
-                    <li><a href="Đạo.html">Đạo</a></li>
-                    <li><a href="Phúc.html">Phúc</a></li>
-                    <li><a href="huy.html">Huy</a></li>
-                    <li><a href="Hải.html">Hải</a></li>
+            <nav id="mobileMenu" class="hidden md:flex absolute md:relative top-16 md:top-0 left-0 right-0 md:left-auto md:right-auto bg-white md:bg-transparent w-full md:w-auto flex-col md:flex-row shadow-md md:shadow-none">
+                <ul class="list-none flex flex-col md:flex-row gap-0 md:gap-6 p-4 md:p-0">
+                    <li><a href="index.html" class="no-underline text-blue-600 font-normal transition-colors block py-2 md:py-0">Trang chủ</a></li>
+                    <li><a href="Thoại.html" class="no-underline text-gray-600 font-normal transition-colors hover:text-blue-600 block py-2 md:py-0">Thoại</a></li>
+                    <li><a href="Đạo.html" class="no-underline text-gray-600 font-normal transition-colors hover:text-blue-600 block py-2 md:py-0">Đạo</a></li>
+                    <li><a href="Phúc.html" class="no-underline text-gray-600 font-normal transition-colors hover:text-blue-600 block py-2 md:py-0">Phúc</a></li>
+                    <li><a href="huy.html" class="no-underline text-gray-600 font-normal transition-colors hover:text-blue-600 block py-2 md:py-0">Huy</a></li>
+                    <li><a href="Hải.html" class="no-underline text-gray-600 font-normal transition-colors hover:text-blue-600 block py-2 md:py-0">Hải</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="welcome">
-        <div class="container">
-            <h1>Chào mừng đến với trang web nhóm Web Development - 23KTPM1 - GA02 - 2025</h1>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+    <section class="bg-gradient-to-r from-blue-600 to-blue-500 text-white text-center py-20">
+        <div class="max-w-[1100px] mx-auto px-5">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Chào mừng đến với trang web nhóm Web Development - 23KTPM1 - GA02 - 2025</h1>
         </div>
     </section>
 
-    <section class="all-members">
-        <div class="container">
-            <h2>Các thành viên</h2>
-            <div class="all-members-grid">
-                <div class="member">
-                    <img src="assets/assets_Alvin/Alvin.jpg" alt="Ảnh không hiển thị được" width="500px" height="500px">
-                    <h3>Trần Quang Đạo - 21127498</h3>
-                    <p>Rất vui được gặp các bạn trong team. Cùng cố gắng làm thật tốt đồ án môn này nhé.</p>
+    <section class="py-16 bg-white text-center">
+        <div class="max-w-[1100px] mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-gray-800">Các thành viên</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-8 border border-gray-200 rounded-lg shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <img src="assets/assets_Alvin/Alvin.jpg" alt="Trần Quang Đạo" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold mb-2 text-blue-600">Trần Quang Đạo - 21127498</h3>
+                    <p class="text-gray-600">Rất vui được gặp các bạn trong team. Cùng cố gắng làm thật tốt đồ án môn này nhé.</p>
                 </div>
-                <div class="member">
-                    <img src="assets/thoai.jpg" alt="Ảnh không hiển thị được">
-                    <h3>Ngô Huỳnh Gia Thoại - 23127124</h3>
-                    <p>Mong được anh em giúp đỡ để đủ điểm qua môn</p>
+                <div class="p-8 border border-gray-200 rounded-lg shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <img src="assets/thoai.jpg" alt="Ngô Huỳnh Gia Thoại" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold mb-2 text-blue-600">Ngô Huỳnh Gia Thoại - 23127124</h3>
+                    <p class="text-gray-600">Mong được anh em giúp đỡ để đủ điểm qua môn</p>
                 </div>
-                <div class="member">
-                    <img src="assets/phucbill.jpg" alt="Ảnh không hiển thị được">
-                    <h3>Nguyễn Thiên Phúc - 23127456</h3>
-                    <p>Ước gì được gánh!!</p>
+                <div class="p-8 border border-gray-200 rounded-lg shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <img src="assets/phucbill.jpg" alt="Nguyễn Thiên Phúc" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold mb-2 text-blue-600">Nguyễn Thiên Phúc - 23127456</h3>
+                    <p class="text-gray-600">Ước gì được gánh!!</p>
                 </div>
-                <div class="member">
-                    <img src="assets/huy.jpg" alt="Ảnh không hiển thị được">
-                    <h3>Nguyễn Cát Huy - 21127300</h3>
+                <div class="p-8 border border-gray-200 rounded-lg shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <img src="assets/huy.jpg" alt="Nguyễn Cát Huy" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold mb-2 text-blue-600">Nguyễn Cát Huy - 21127300</h3>
+                    <p class="text-gray-600"></p>
                 </div>
-                <div class="member">
-                    <img src="assets/hai.jpg" alt="Ảnh không hiển thị được">
-                    <h3>Đinh Viết Hải - 23127045</h3>
-                    <p>Hợp tác vui vẻ cùng qua môn ạ</p>
+                <div class="p-8 border border-gray-200 rounded-lg shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <img src="assets/hai.jpg" alt="Đinh Viết Hải" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold mb-2 text-blue-600">Đinh Viết Hải - 23127045</h3>
+                    <p class="text-gray-600">Hợp tác vui vẻ cùng qua môn ạ</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
+    <footer class="bg-gray-800 text-white text-center py-5 mt-10">
+        <div class="max-w-[1100px] mx-auto px-5">
             <p>&copy; 2025 Nhóm Web Development - 23KTPM1 - GA02</p>
         </div>
     </footer>
