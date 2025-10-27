@@ -4,296 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>23127124</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
-    <style>
+</head>
+<body class="font-['Segoe UI',Arial,sans-serif] leading-relaxed text-gray-700 bg-gray-100" style="background-image: url(assets/bg.png); background-size: cover; background-position: top center; background-repeat: repeat-y;">
 
-        body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-            background-image: url(assets/bg.png);  background-size: cover; background-position: top center; background-repeat: repeat-y
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background-color: #fff;
-            padding: 1rem 0;
-            /* border-bottom: 1px solid #eee; */
-            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); */
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #2a6dfc; 
-            text-decoration: none;
-        }
-
-        nav ul {
-            list-style-type: none;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin-left: 25px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #555;
-            font-weight: 400;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-            color: #2a6dfc; 
-        }
-
-        .welcome {
-            background: linear-gradient(to right, #2a6dfc, #5c93ff);
-            color: #fff;
-            text-align: center;
-            padding: 80px 0;
-        }
-
-        .welcome h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .welcome p {
-            font-size: 1.2rem;
-            font-weight: 400;
-            margin-bottom: 30px;
-        }
-
-        .all-members {
-            padding: 60px 0;
-            background-color: #fff;
-            text-align: center;
-        }
-
-        .all-members h2 {
-            font-size: 2.2rem;
-            margin-bottom: 40px;
-            color: #333;
-        }
-
-        .all-members-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .member {
-            padding: 30px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .member:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .member img {
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
-
-        .member h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: #2a6dfc;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-
-        @media (max-width: 768px) {
-            header .container {
-                flex-direction: column;
-            }
-
-            nav {
-                margin-top: 15px;
-            }
-
-            .welcome h1 {
-                font-size: 2.2rem;
-            }
-
-            .all-members-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-    </head>
-<body>
-
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">Nhóm Web Development - 23KTPM1 - GA01 - 2025</a>
+    <header class="sticky top-0 z-10 bg-white py-4">
+        <div class="max-w-[1100px] mx-auto px-5 flex justify-between items-center flex-col md:flex-row">
+            <a href="index.html" class="text-2xl font-bold text-blue-600 no-underline">Nhóm Web Development - 23KTPM1 - GA01 - 2025</a>
             <nav>
-                <ul>
-                    <li><a href="index.html">Trang chủ</a></li>
-                    <li><a href="Thoại.html"  class="active">Thoại</a></li>
-                    <li><a href="Đạo.html">Đạo</a></li>
-                    <li><a href="Phúc.html">Phúc</a></li>
-                    <li><a href="huy.html">Huy</a></li>
-                    <li><a href="Hải.html">Hải</a></li>
+                <ul class="list-none flex gap-6 mt-4 md:mt-0">
+                    <li><a href="index.html" class="no-underline text-gray-600 font-normal transition-colors hover:text-blue-600">Trang chủ</a></li>
+                    <li><a href="Thoại.html" class="no-underline text-blue-600 font-normal transition-colors">Thoại</a></li>
+                    <li><a href="Đạo.html" class="no-underline text-gray-600 font-normal transition-colors hover:text-blue-600">Đạo</a></li>
+                    <li><a href="Phúc.html" class="no-underline text-gray-600 font-normal transition-colors hover:text-blue-600">Phúc</a></li>
+                    <li><a href="huy.html" class="no-underline text-gray-600 font-normal transition-colors hover:text-blue-600">Huy</a></li>
+                    <li><a href="Hải.html" class="no-underline text-gray-600 font-normal transition-colors hover:text-blue-600">Hải</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="main_container" style="display: block; text-align: center; border-bottom-left-radius: 50px;">
-        <h1 style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 2.8rem; color: #111;">Xin chào! Tôi là Thoại</h1>
+    <div class="block text-center rounded-bl-3xl border">
+        <h1 class="font-['Montserrat'] font-bold text-5xl text-gray-900 py-10">Xin chào! Tôi là Thoại</h1>
 
-        <p class="explain" style="font-size: medium; width: 80%; margin: 0 auto;"> Tôi là sinh viên khóa 23 (23127124) của Trường Đại học Khoa học - ĐHQG-HCM, chuyên ngành Mạng máy tính. Tôi có niềm đam mê mãnh liệt với lập trình và thích khám phá các công nghệ mới. Tôi cũng thích tìm hiểu về phát triển web, kỹ thuật phần mềm và an ninh mạng. Ngoài giờ học, tôi có sở thích thi đấu giải leetcode với những người bạn, chơi game chung với nhóm và nghe nhạc, đọc truyện hoặc xem phim khi ở một mình</p>
-        <p> Liên hệ với tôi thông qua <a href="mailto:nhgthoai23@clc.fitus.edu.vn">nhgthoai23@clc.fitus.edu.vn</a></p>
-        <h1 class="hobbies-title" style="font-size: 2.5rem; margin: 40px 0; color: #333; text-align: center;">Sở thích</h1> 
-
+        <p class="text-base w-4/5 mx-auto mb-4">Tôi là sinh viên khóa 23 (23127124) của Trường Đại học Khoa học - ĐHQG-HCM, chuyên ngành Mạng máy tính. Tôi có niềm đam mê mãnh liệt với lập trình và thích khám phá các công nghệ mới. Tôi cũng thích tìm hiểu về phát triển web, kỹ thuật phần mềm và an ninh mạng. Ngoài giờ học, tôi có sở thích thi đấu giải leetcode với những người bạn, chơi game chung với nhóm và nghe nhạc, đọc truyện hoặc xem phim khi ở một mình</p>
+        <p class="mb-4">Liên hệ với tôi thông qua <a href="mailto:nhgthoai23@clc.fitus.edu.vn" class="text-blue-600 hover:underline">nhgthoai23@clc.fitus.edu.vn</a></p>
     </div>
-<div class="hobby"
-     style="display: flex; flex-wrap: wrap; width: 80%; margin: 50px auto; text-align: center; gap: 20px;">
+<div class="block text-center rounded-bl-3xl">
+  <h2 class="text-4xl my-10 text-gray-700 text-center">Sở thích</h2>
+<div class="flex flex-wrap w-4/5 mx-auto my-12 gap-5 justify-center">
 
-  <div class="hobby-item" style="background-image: url('assets/game.jpg');">
-    <div class="overlay">Chơi game</div>
+  <div class="relative w-full sm:w-1/2 lg:w-1/3 aspect-square rounded-3xl overflow-hidden cursor-pointer group transition-all duration-300 hover:scale-105 hover:shadow-lg" style="background-image: url('assets/game.jpg'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-400/40 to-white/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <div class="absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="text-shadow: 0 0 15px rgba(0, 0, 0, 0.8); letter-spacing: 2px;">Chơi game</div>
   </div>
 
-  <div class="hobby-item" style="background-image: url('assets/music.jpg');">
-    <div class="overlay">Nghe nhạc</div>
+  <div class="relative w-full sm:w-1/2 lg:w-1/3 aspect-square rounded-3xl overflow-hidden cursor-pointer group transition-all duration-300 hover:scale-105 hover:shadow-lg" style="background-image: url('assets/music.jpg'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-400/40 to-white/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <div class="absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="text-shadow: 0 0 15px rgba(0, 0, 0, 0.8); letter-spacing: 2px;">Nghe nhạc</div>
   </div>
 
-  <div class="hobby-item" style="background-image: url('assets/movie.jpg');">
-    <div class="overlay">Xem phim</div>
+  <div class="relative w-full sm:w-1/2 lg:w-1/3 aspect-square rounded-3xl overflow-hidden cursor-pointer group transition-all duration-300 hover:scale-105 hover:shadow-lg" style="background-image: url('assets/movie.jpg'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-400/40 to-white/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <div class="absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="text-shadow: 0 0 15px rgba(0, 0, 0, 0.8); letter-spacing: 2px;">Xem phim</div>
   </div>
 
-  <div class="hobby-item" style="background-image: url('assets/code.png');">
-    <div class="overlay">Lập trình</div>
+  <div class="relative w-full sm:w-1/2 lg:w-1/3 aspect-square rounded-3xl overflow-hidden cursor-pointer group transition-all duration-300 hover:scale-105 hover:shadow-lg" style="background-image: url('assets/code.png'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-400/40 to-white/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <div class="absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="text-shadow: 0 0 15px rgba(0, 0, 0, 0.8); letter-spacing: 2px;">Lập trình</div>
   </div>
 </div>
+</div>
+
+
 
   
 </div>
 
-<style>
-  .hobby-item {
-    flex: 1 1 calc(50% - 20px);
-    aspect-ratio: 1/1;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    transition: all 0.4s ease;
-    cursor: pointer;
-    background-repeat: no-repeat;
-  }
 
-  /* Gradient vien va glow */
-  .hobby-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(100, 150, 255, 0.6);
-  }
-
-  /* Hieu ung mo anh */
-  .hobby-item:hover::before {
-    opacity: 1;
-  }
-
-  .hobby-item::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(100, 150, 255, 0.4), rgba(255, 255, 255, 0.2));
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    backdrop-filter: blur(4px);
-  }
-
-  /* Tao text giua anh */
-  .overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-    opacity: 0;
-    transition: opacity 0.4s ease; /* lam mo */
-    letter-spacing: 2px;
-  }
-
-  /* Hien text khi hover */
-  .hobby-item:hover .overlay {
-    opacity: 1;
-  }
-</style>
-
-<div class="skill" style="
-    width: 80%; 
-    margin: 50px auto; 
-    text-align: center; 
-    background: linear-gradient(135deg, #e6f0ff, #fef6ff); 
-    border-radius: 25px; 
-    padding-bottom: 40px;
-    padding-top: 30px;
-    box-shadow: 0 4px 25px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-">
-  <h1 style="font-size: 2rem; margin-bottom: 25px; color: #334;">Kỹ năng</h1>
-  <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-    <li style="background: white; padding: 15px 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: 0.3s; font-weight: 500;">
+<div class="w-4/5 mx-auto my-12 text-center bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl pb-10 pt-8 shadow-md">
+  <h2 class="text-3xl mb-6 text-gray-700">Kỹ năng</h2>
+  <ul class="list-none p-0 flex flex-wrap justify-center gap-5">
+    <li class="bg-white px-6 py-4 rounded-lg shadow-sm transition-transform duration-300 font-medium hover:scale-125">
       HTML & CSS
     </li>
-    <li style="background: white; padding: 15px 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: 0.3s; font-weight: 500;">
+    <li class="bg-white px-6 py-4 rounded-lg shadow-sm transition-transform duration-300 font-medium hover:scale-125">
       JavaScript
     </li>
-    <li style="background: white; padding: 15px 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: 0.3s; font-weight: 500;">
+    <li class="bg-white px-6 py-4 rounded-lg shadow-sm transition-transform duration-300 font-medium hover:scale-125">
       Python
     </li>
-    <li style="background: white; padding: 15px 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: 0.3s; font-weight: 500;">
+    <li class="bg-white px-6 py-4 rounded-lg shadow-sm transition-transform duration-300 font-medium hover:scale-125">
       C/C++
     </li>
   </ul>
 </div>
 
-<script>
-  document.querySelectorAll('.skill li').forEach(li => {
-    li.addEventListener('mouseover', () => li.style.transform = 'scale(1.2)');
-    li.addEventListener('mouseout', () => li.style.transform = 'scale(1)');
-  });
-</script>
-
-    <footer>
-        <div class="container">
+    <footer class="bg-gray-800 text-white text-center py-5 mt-10">
+        <div class="max-w-[1100px] mx-auto px-5">
             <p>&copy; 2025 Nhóm Web Development - 23KTPM1 - GA01</p>
         </div>
     </footer>
